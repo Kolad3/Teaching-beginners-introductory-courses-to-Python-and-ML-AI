@@ -1,3 +1,6 @@
+# This code generates a synthetic dataset for study hours vs scores.
+# It creates a larger dataset to be used in machine learning models for predicting student scores based on hours studied.
+
 import pandas as pd
 import numpy as np
 
@@ -13,7 +16,7 @@ data = pd.DataFrame({
 })
 
 # Save to CSV
-csv_path = "C:\\Users\\DELL\\Documents\\Teens Empowerment\\student_scores_large.csv"
+csv_path = "C:\\Users\\DELL\\Documents\\Teens Empowerment\\student_scores_large.csv"    # Path to save the generated dataset, replace with your desired path
 data.to_csv(csv_path, index=False)
 
 # Show a preview

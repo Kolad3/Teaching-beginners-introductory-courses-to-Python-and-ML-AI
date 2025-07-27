@@ -1,3 +1,7 @@
+# This code implements a simple calculator that can handle addition, subtraction, multiplication, division, and exponentiation (power) operations. 
+# It evaluates expressions based on operator precedence (to model the BODMAS Rules).
+
+# This function evaluates a simple expression with two numbers and an operator.
 def evaluate(a, op, b):
     if op == '+':
         return a + b
@@ -12,6 +16,7 @@ def evaluate(a, op, b):
     else:
         return None
 
+# This function determines the precedence of operators.(To implement BODMAS rules)
 def precedence(op):
     if op == '**':
         return 3
@@ -23,6 +28,7 @@ def precedence(op):
         return 0
 
 # === INPUT ===
+# This section takes user input for the calculator operations.
 print("Welcome to Smart Calculator with Power Support")
 
 num1 = float(input("Enter first number: "))
@@ -32,6 +38,7 @@ op2 = input("Enter second operator (+, -, *, /, **): ")
 num3 = float(input("Enter third number: "))
 
 # === LOGIC ===
+# This section calculates the expression based on operator precedence.
 if precedence(op2) > precedence(op1):
     # Evaluate num2 op2 num3 first
     part = evaluate(num2, op2, num3)
